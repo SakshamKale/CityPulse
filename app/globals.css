@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Body colours and fonts are set with Tailwind classes in app/layout.js,
+   so there are intentionally no body rules here. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #c7d2fe;
+}
