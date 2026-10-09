@@ -19,24 +19,28 @@ export default function Footer() {
           <div>
             <h2 className="font-bold text-slate-900">Explore</h2>
             <div className="mt-3 flex flex-col items-start gap-2 text-sm text-slate-600">
-              <Link className="hover:text-indigo-600" href="/explore">Explore places</Link>
-              <Link className="hover:text-indigo-600" href="/for-you">For You</Link>
-              <Link className="hover:text-indigo-600" href="/compare">Compare places</Link>
+              <Link href="/explore">Explore places</Link>
+              <Link href="/for-you">For You</Link>
+              <Link href="/compare">Compare places</Link>
             </div>
           </div>
 
           <div>
-            <h2 className="font-bold text-slate-900">Plan with confidence</h2>
+            <h2 className="font-bold text-slate-900">Plan your outing</h2>
             <div className="mt-3 flex flex-col items-start gap-2 text-sm text-slate-600">
-              <Link className="hover:text-indigo-600" href="/plan">Build My Day</Link>
-              <Link className="hover:text-indigo-600" href="/safety">Safety guidance</Link>
+              <Link href="/plan">Build My Day</Link>
+              <Link href="/safety">Safety guidance</Link>
             </div>
           </div>
         </div>
 
         <div className="mt-9 flex flex-col gap-3 border-t border-slate-100 pt-5 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} CityPulse · Made for exploring Pune.</p>
-          <p>Hackathon prototype. Ratings, budgets and scores may be sample estimates.</p>
+          <p>
+            Copyright 2026 CityPulse. Made for exploring Pune.
+          </p>
+          <p>
+            Hackathon prototype. Ratings, budgets and scores may be sample estimates.
+          </p>
         </div>
       </div>
     </footer>
