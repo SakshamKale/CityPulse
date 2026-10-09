@@ -1,12 +1,133 @@
+
 @import "tailwindcss";
 
-/* Body colours and fonts are set with Tailwind classes in app/layout.js,
-   so there are intentionally no body rules here. */
+:root {
+  --background: #f7f8fc;
+  --foreground: #15172b;
+  --primary: #5546e8;
+  --muted: #697086;
+  --border: #e8eaf2;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
 ::selection {
-  background: #c7d2fe;
+  background: #dcd8ff;
+  color: #30248f;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid #a5a0ff;
+  outline-offset: 3px;
+}
+
+::placeholder {
+  color: #9ba1b3;
+}
+
+.citypulse-shell {
+  width: min(100% - 32px, 1240px);
+  margin-inline: auto;
+}
+
+.citypulse-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 5px 20px rgb(24 29 66 / 4%);
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.citypulse-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3ceff;
+  box-shadow: 0 16px 35px rgb(40 34 100 / 9%);
+}
+
+.citypulse-gradient {
+  background: linear-gradient(130deg, #20175d 0%, #4f46e5 55%, #9a63ed 100%);
+}
+
+.citypulse-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: var(--primary);
+  padding: 12px 19px;
+  color: white;
+  font-size: 14px;
+  font-weight: 750;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.citypulse-button:hover {
+  background: #4335ce;
+  transform: translateY(-1px);
+}
+
+.citypulse-button-secondary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: white;
+  padding: 10px 17px;
+  color: #282c43;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.citypulse-button-secondary:hover {
+  background: #f2f1ff;
+  border-color: #d3ceff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
